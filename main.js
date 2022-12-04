@@ -8,7 +8,7 @@ module.exports.loop = function () {
         //判断在内存中能不能获取到这个creep，不能则删除这个内存
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
-            console.log('Clearing non-existing creep memory:', name);
+            console.log('清除不存在的 creep 内存:', name);
         }
     }
     
@@ -17,7 +17,7 @@ module.exports.loop = function () {
     //判断存在的creep数量，少于2则创建
     if(harvesters.length < 2) {
         var newName = 'Harvester' + Game.time;
-        console.log('Spawning new harvester: ' + newName);
+        console.log('生产新的采集者: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
             {memory: {role: 'harvester'}});        
     }
@@ -27,7 +27,7 @@ module.exports.loop = function () {
     //判断存在的creep数量，少于2则创建
     if(upgraders.length < 2) {
         var newName = 'Upgraders' + Game.time;
-        console.log('Spawning new upgrader: ' + newName);
+        console.log('生产新的占领着: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
             {memory: {role: 'upgrader'}});        
     }
@@ -37,7 +37,7 @@ module.exports.loop = function () {
     //判断存在的creep数量，少于2则创建
     if(builds.length < 1) {
         var newName = 'Builds' + Game.time;
-        console.log('Spawning new build: ' + newName);
+        console.log('生产新的建造者: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
             {memory: {role: 'build'}});        
     }
