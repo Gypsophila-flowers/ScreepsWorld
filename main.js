@@ -25,7 +25,7 @@ module.exports.loop = function () {
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     // console.log('Upgraders（占领者）: ' + harvesters.length);
     //判断存在的creep数量，少于2则创建
-    if(upgraders.length < 1) {
+    if(upgraders.length < 2) {
         var newName = 'Upgraders' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName, 
@@ -35,7 +35,7 @@ module.exports.loop = function () {
     var builds = _.filter(Game.creeps, (creep) => creep.memory.role == 'build');
     // console.log('Builds（建造者）: ' + harvesters.length);
     //判断存在的creep数量，少于2则创建
-    if(builds.length < 3) {
+    if(builds.length < 1) {
         var newName = 'Builds' + Game.time;
         console.log('Spawning new build: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
