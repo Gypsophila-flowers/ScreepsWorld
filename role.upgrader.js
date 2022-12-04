@@ -2,7 +2,7 @@ var roleUpgrader = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-        console.log(crerp.memory.role+":"+creep.store[RESOURCE_ENERGY]);
+        console.log(creep.memory.role+":"+creep.store[RESOURCE_ENERGY]);
 	    if(creep.store[RESOURCE_ENERGY] < creep.store.getCapacity()) {
             //采矿
             var sources = creep.room.find(FIND_SOURCES);
