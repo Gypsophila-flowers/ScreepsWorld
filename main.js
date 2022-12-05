@@ -28,7 +28,7 @@ module.exports.loop = function () {
     if(upgraders.length < 2) {
         var newName = 'Upgraders' + Game.time;
         console.log('生产新的占领着: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
+        Game.spawns['Spawn1'].spawnCreep([WORK,WORK,WORK,CARRY,MOVE,MOVE], newName, 
             {memory: {role: 'upgrader'}});        
     }
     
