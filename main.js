@@ -96,8 +96,8 @@ const roleList = [
 	new Role(ROLE_HARVESTER, LITTLE_BODY, roleHarvester, 1),
 	new Role(ROLE_UPGRADER, UPGRADER_BODY, roleUpgrader, 2),
 	new Role(ROLE_SOLDIER, SOLDIER_BODY, roleSoldier, 2, true),
-	new Role(ROLE_MINER, MINER_BODY, roleMiner, 0),
-	new Role(ROLE_TRANSFER, TRANSFER_BODY, roleTranfer, 0),
+	new Role(ROLE_MINER, MINER_BODY, roleMiner, 1),
+	new Role(ROLE_TRANSFER, TRANSFER_BODY, roleTranfer, 1),
 	new Role(ROLE_BUILDER, BUILDER_BODY, roleBuilder, 2),
 	new Role(ROLE_REPAIRER, REPAIRER_BODY, roleRepairer, 1),
 ]
