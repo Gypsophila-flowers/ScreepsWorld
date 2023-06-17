@@ -8,7 +8,7 @@ const roleUpgrader = {
             creep.say('🛺 harvesting')
         } else if (!creep.memory.upgrading && creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.upgrading = true
-            creep.say('🙌 upgrading')
+            creep.say('⚡ upgrading')
         }
 
         if (creep.memory.upgrading) {

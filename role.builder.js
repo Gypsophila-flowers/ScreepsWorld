@@ -5,7 +5,6 @@ const roleBuilder = {
         if (creep.memory.building && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.building = false
             creep.say('🛺 harvesting')
-            //收获🛠⚔
         } else if (!creep.memory.building && creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.building = true
             creep.say('🚧 building')
