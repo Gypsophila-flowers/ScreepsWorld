@@ -1,6 +1,8 @@
 const resourceUtil = require('utils.resource')
-
-
+/**
+ * 升级者
+ * @type {{run: roleUpgrader.run}}
+ */
 const roleUpgrader = {
     run: function (creep) {
         if (creep.memory.upgrading && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {

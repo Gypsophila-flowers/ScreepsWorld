@@ -1,5 +1,8 @@
 const resourceUtil = require('utils.resource')
-
+/**
+ * 建造者
+ * @type {{run: roleBuilder.run}}
+ */
 const roleBuilder = {
     run: function (creep) {
         if (creep.memory.building && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {

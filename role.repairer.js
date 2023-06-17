@@ -1,4 +1,8 @@
 const RESOURCE_UTIL = require('utils.resource')
+/**
+ * 维修者
+ * @type {{run: roleRepairer.run}}
+ */
 const roleRepairer = {
     run: (creep) => {
         if (creep.memory.repairing && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {

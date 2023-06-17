@@ -1,5 +1,8 @@
 var resourceUtil = require('utils.resource')
-
+/**
+ * 采矿者
+ * @type {{run: roleHarvester.run}}
+ */
 const roleHarvester = {
     run: function (creep) {
         if (creep.memory.transfering && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {
