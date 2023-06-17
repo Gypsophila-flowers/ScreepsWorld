@@ -76,7 +76,7 @@ class Role {
 	}
 }
 
-const LITTLE_BODY = [WORK, CARRY, MOVE]
+const LITTLE_BODY = [WORK, WORK, CARRY, MOVE]
 // const MEDIUM_BODY = [WORK, WORK, CARRY, CARRY, MOVE, MOVE]
 const MEDIUM_BODY = [WORK, CARRY, MOVE, MOVE]
 //升级者的装备
