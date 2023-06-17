@@ -4,10 +4,10 @@ const roleHarvester = {
     run: function (creep) {
         if (creep.memory.transfering && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.transfering = false
-            creep.say('harvesting', { visualizePathStyle: { stroke: '#fff' } })
+            creep.say('🛺 harvesting', { visualizePathStyle: { stroke: '#fff' } })
         } else if (!creep.memory.transfering && creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.transfering = true
-            creep.say('transfering', { visualizePathStyle: { stroke: '#fff' } })
+            creep.say('🚌 transfering', { visualizePathStyle: { stroke: '#fff' } })
         }
         // 采集逻辑：有不空的container找container，否则找resource
         if (!creep.memory.transfering) {

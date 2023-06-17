@@ -5,10 +5,10 @@ const roleUpgrader = {
     run: function (creep) {
         if (creep.memory.upgrading && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.upgrading = false
-            creep.say('harvesting')
+            creep.say('🛺 harvesting')
         } else if (!creep.memory.upgrading && creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.upgrading = true
-            creep.say('upgrading')
+            creep.say('🙌 upgrading')
         }
 
         if (creep.memory.upgrading) {

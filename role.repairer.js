@@ -3,7 +3,7 @@ const roleRepairer = {
     run: (creep) => {
         if (creep.memory.repairing && creep.store.getUsedCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.repairing = false
-            creep.say('harvesting')
+            creep.say('🛺 harvesting')
         } else if (!creep.memory.repairing && creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {
             creep.memory.repairing = true
             creep.say('repairing')
