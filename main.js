@@ -77,7 +77,8 @@ class Role {
 }
 
 const LITTLE_BODY = [WORK, CARRY, MOVE]
-const MEDIUM_BODY = [WORK, WORK, CARRY, CARRY, MOVE, MOVE]
+// const MEDIUM_BODY = [WORK, WORK, CARRY, CARRY, MOVE, MOVE]
+const MEDIUM_BODY = [WORK, CARRY, MOVE, MOVE]
 //升级者的装备
 // const LARGE_BODY = [WORK, WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE]
 const LARGE_BODY = [WORK, CARRY, MOVE]
@@ -95,8 +96,8 @@ const roleList = [
 	new Role(ROLE_HARVESTER, LITTLE_BODY, roleHarvester, 1),
 	new Role(ROLE_UPGRADER, UPGRADER_BODY, roleUpgrader, 2),
 	new Role(ROLE_SOLDIER, SOLDIER_BODY, roleSoldier, 2, true),
-	new Role(ROLE_MINER, MINER_BODY, roleMiner, 1),
-	new Role(ROLE_TRANSFER, TRANSFER_BODY, roleTranfer, 1),
+	new Role(ROLE_MINER, MINER_BODY, roleMiner, 0),
+	new Role(ROLE_TRANSFER, TRANSFER_BODY, roleTranfer, 0),
 	new Role(ROLE_BUILDER, BUILDER_BODY, roleBuilder, 2),
 	new Role(ROLE_REPAIRER, REPAIRER_BODY, roleRepairer, 1),
 ]
