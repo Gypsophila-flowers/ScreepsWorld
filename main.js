@@ -38,7 +38,7 @@ class Role {
 	}
 	createIfNeed(list) {
 		let spawn = this.getSpawn()
-		this.log(`createIfNeed: len=${list.length},max=${this.max}`)
+		// this.log(`createIfNeed: len=${list.length},max=${this.max}`)
 		if (list.length < this.max) {
 			let couldSpawn = roleCouldSpawn(this)
 			this.log(`not max, couldSpawn=${couldSpawn}`)
@@ -123,7 +123,7 @@ module.exports.loop = function () {
 		}
 	}
 
-	console.log('loop')
+	// console.log('loop')
 	for (let role of roleList) {
 		role.play()
 	}
