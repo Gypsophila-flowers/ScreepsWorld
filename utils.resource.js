@@ -63,7 +63,7 @@ const harvestClosestResourceOfSpawn = (creep) => {
 }
 // 停靠（spawn附近）
 const park = (creep) => {
-    // 停靠在空地
+    // 停靠在空地 会停靠到房间控制器附近
     creep.moveTo(getController(), { visualizePathStyle: { stroke: '#fff' } })
 }
 

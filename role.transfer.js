@@ -52,7 +52,7 @@ const roleTransfer = {
                         creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                     }
                 } else {
-                    //resourceUtil.park(creep)
+                    resourceUtil.park(creep)
                 }
             }
         }
