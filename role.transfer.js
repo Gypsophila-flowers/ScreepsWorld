@@ -52,16 +52,7 @@ const roleTransfer = {
                         creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                     }
                 } else {
-                    if (creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) { //如果没没有存储满的容器就执行
-                        let container = resourceUtil.findClosestEmptyContainerOfScreep(creep, STRUCTURE_CONTAINER)
-                        if (container) {
-                            if (creep.transfer(container, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                                creep.moveTo(container, { visualizePathStyle: { stroke: '#fff' } })
-                            }
-                        }
-                    }else{
-                        resourceUtil.park(creep)
-                    }
+                    resourceUtil.park(creep)
                 }
             }
         }
