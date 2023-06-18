@@ -58,7 +58,7 @@ class Role {
 	}
 
 	play() {
-		this.log('play')
+		// this.log('play')
 		let creepList = _.filter(Game.creeps, (creep) => creep.memory.role == this.role)
 
 		this.createIfNeed(creepList)
