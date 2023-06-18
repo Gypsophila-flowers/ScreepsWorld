@@ -30,7 +30,29 @@ const roleTransfer = {
                     creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                 }
             } else {
-                // resourceUtil.park(creep)
+                // 运输逻辑：优先store不满的我方建筑，没有则停车
+                // FIND_MY_STRUCTURES不能找到container
+                let structureList = creep.room.find(FIND_MY_STRUCTURES, {
+                    filter: (it) => (it.structureType == STRUCTURE_EXTENSION)
+                        && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
+                })
+                if (!structureList.length) {
+                    structureList = creep.room.find(FIND_MY_STRUCTURES, {
+                        filter: (it) =>
+                            it.structureType == STRUCTURE_SPAWN
+                            &&
+                            it.store && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
+                    })
+                }
+                if (structureList.length) {
+                    let structure = structureList[0]
+                    let transferCode = creep.transfer(structure, RESOURCE_ENERGY)
+                    if (transferCode == ERR_NOT_IN_RANGE) {
+                        creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
+                    }
+                } else {
+                    resourceUtil.park(creep)
+                }
             }
         }
     }
