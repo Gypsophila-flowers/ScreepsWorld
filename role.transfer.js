@@ -30,6 +30,7 @@ const roleTransfer = {
                     creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                 }
             } else {
+                //无本职工作的时候承担运输者的省份
                 // 运输逻辑：优先store不满的我方建筑，没有则停车
                 // FIND_MY_STRUCTURES不能找到container
                 let structureList = creep.room.find(FIND_MY_STRUCTURES, {
@@ -51,7 +52,7 @@ const roleTransfer = {
                         creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                     }
                 } else {
-                    resourceUtil.park(creep)
+                    //resourceUtil.park(creep)
                 }
             }
         }
