@@ -44,17 +44,8 @@ const roleHarvester = {
                 if (transferCode == ERR_NOT_IN_RANGE) {
                     creep.moveTo(structure, { visualizePathStyle: { stroke: '#fff' } })
                 }
-            } else { // 没有本职工作就去进行运输者的工作
-                if (creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) { //如果没没有存储满的容器就执行
-                    let container = resourceUtil.findClosestEmptyContainerOfScreep(creep, STRUCTURE_CONTAINER)
-                    if (container) {
-                        if (creep.transfer(container, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                            creep.moveTo(container, { visualizePathStyle: { stroke: '#fff' } })
-                        }
-                    }
-                }else{ // 实在没工作了，就去房间控制器旁边等待
-                    resourceUtil.park(creep)
-                }
+            } else { // 没有本职工作就去房间控制器旁边等待
+                resourceUtil.park(creep)
             }
         }
     }
