@@ -94,7 +94,7 @@ const REPAIRER_BODY = MEDIUM_BODY
 
 const roleList = [
 	new Role(ROLE_HARVESTER, LITTLE_BODY, roleHarvester, 1),
-	new Role(ROLE_UPGRADER, UPGRADER_BODY, roleUpgrader, 2),
+	new Role(ROLE_UPGRADER, UPGRADER_BODY, roleUpgrader, 1),
 	new Role(ROLE_SOLDIER, SOLDIER_BODY, roleSoldier, 2, true),
 	new Role(ROLE_MINER, MINER_BODY, roleMiner, 1),
 	new Role(ROLE_TRANSFER, TRANSFER_BODY, roleTranfer, 1),
