@@ -24,9 +24,9 @@ const roleMiner = {
             console.log(">>>", JSON.stringify(droppedResource))
             if (droppedResource.length) {
                 console.log(creep.pickup(droppedResource[0]))
-                // if (creep.pickup(droppedResource) == ERR_NOT_IN_RANGE) {
-                //     creep.moveTo(droppedResource, { visualizePathStyle: { stroke: '#fff' } })
-                // }
+                if (creep.pickup(droppedResource) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(droppedResource, { visualizePathStyle: { stroke: '#fff' } })
+                }
             }
             let resource = resourceUtil.findClosestResourceOfSpawn()
             if (resource) {
