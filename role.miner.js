@@ -1,5 +1,8 @@
 const resourceUtil = require('utils.resource')
-
+/**
+ * 运输者，从地图采集资源并将资源container（存储容器）中
+ * @type {{run: roleMiner.run}}
+ */
 const roleMiner = {
     run: (creep) => {
         if (creep.store.getFreeCapacity(RESOURCE_ENERGY) == 0) {

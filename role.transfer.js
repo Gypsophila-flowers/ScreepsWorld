@@ -19,7 +19,11 @@ const roleTransfer = {
             }
         } else {
             // 运输逻辑：优先storage，没有则停车
-            let structureList = creep.room.find(FIND_MY_STRUCTURES, {
+            // let structureList = creep.room.find(FIND_MY_STRUCTURES, {
+            //     filter: (it) => (it.structureType == STRUCTURE_STORAGE)
+            //         && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
+            // })
+            let structureList = creep.room.find(FIND_MY_CONTAINER, {
                 filter: (it) => (it.structureType == STRUCTURE_STORAGE)
                     && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
             })
