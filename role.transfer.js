@@ -23,10 +23,6 @@ const roleTransfer = {
                 filter: (it) => (it.structureType == STRUCTURE_STORAGE)
                     && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
             })
-            // let structureList = creep.room.find(FIND_CONSTRUCTION_SITES, {
-            //     filter: (it) => (it.structureType == STRUCTURE_STORAGE)
-            //         && it.store.getFreeCapacity(RESOURCE_ENERGY) > 0
-            // })
             if (structureList.length) {
                 let structure = structureList[0]
                 let transferCode = creep.transfer(structure, RESOURCE_ENERGY)
