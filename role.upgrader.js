@@ -13,12 +13,12 @@ const roleUpgrader = {
             creep.say('⚡ upgrading')
         }
 
-        if (creep.memory.upgrading) {
+        if (creep.memory.upgrading) { //将资源交给房间控制中心
             let controller = creep.room.controller
             if (creep.upgradeController(controller) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(controller, { visualizePathStyle: { stroke: '#fff' } })
             }
-        } else {
+        } else { //去获取资源
             let store = resourceUtil.findClosestUsedContainerOfSpawn(STRUCTURE_STORAGE)
             if (store) {
                 resourceUtil.withDrawEnergyFromStructure(creep, store)
